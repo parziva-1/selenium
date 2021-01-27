@@ -9,17 +9,26 @@ import time
 #    numero = str(df['Numero'][i])
 #    print(numero)
 
-internet = False
-while internet == False:
-    s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
-    s.settimeout(5)
-    try:
-        s.connect(("www.google.com", 80))
-    except (socket.gaierror, socket.timeout):
-        print("Sin conexión a internet")
-        internet= False
-        time.sleep(10)
-    else:
-        print("Con conexión a internet")
-        internet = True
-        s.close()
+
+
+def Internet():
+    global internet
+    internet = False
+    while True:
+        s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
+        s.settimeout(5)
+        try:
+            s.connect(("www.google.com", 80))
+        except (socket.gaierror, socket.timeout):
+            print("Sin conexión a internet")
+            time.sleep(10)
+        else:
+            print("Con conexión a internet")
+            internet = True
+            s.close()
+            break
+
+    return(internet)
+            
+Internet()
+print(internet)
