@@ -48,3 +48,63 @@ JavaScript error: resource://activity-stream/lib/ASRouter.jsm, line 987: NS_ERRO
 
 ###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
 
+1612048050390	geckodriver	INFO	Listening on 127.0.0.1:55690
+1612048053436	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "-foreground" "-no-remote" "-profile" "C:\\Users\\Alberto\\AppData\\Local\\Temp\\rust_mozprofile8OG9ao"
+Can't find symbol 'eglSwapBuffersWithDamageEXT'.
+Can't find symbol 'eglSetDamageRegionKHR'.
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+1612048058017	Marionette	INFO	Listening on port 55699
+1612048058200	Marionette	WARN	TLS certificate errors will be ignored for this session
+1612048065369	Marionette	INFO	Stopped listening on port 55699
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+1612048372518	geckodriver	INFO	Listening on 127.0.0.1:56071
+1612048375564	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "-foreground" "-no-remote" "-profile" "C:\\Users\\Alberto\\AppData\\Local\\Temp\\rust_mozprofilevL6dOD"
+Can't find symbol 'eglSwapBuffersWithDamageEXT'.
+Can't find symbol 'eglSetDamageRegionKHR'.
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+1612048379306	Marionette	INFO	Listening on port 56080
+1612048379727	Marionette	WARN	TLS certificate errors will be ignored for this session
+1612048385602	Marionette	INFO	Stopped listening on port 56080
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+1612048402433	geckodriver	INFO	Listening on 127.0.0.1:56171
+1612048405481	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "-foreground" "-no-remote" "-profile" "C:\\Users\\Alberto\\AppData\\Local\\Temp\\rust_mozprofileSPKtzI"
+Can't find symbol 'eglSwapBuffersWithDamageEXT'.
+Can't find symbol 'eglSetDamageRegionKHR'.
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+1612048409184	Marionette	INFO	Listening on port 56181
+1612048409652	Marionette	WARN	TLS certificate errors will be ignored for this session
+1612048416140	Marionette	INFO	Stopped listening on port 56181
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+1612048448968	geckodriver	INFO	Listening on 127.0.0.1:56254
+1612048452005	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "-foreground" "-no-remote" "-profile" "C:\\Users\\Alberto\\AppData\\Local\\Temp\\rust_mozprofilezLyI90"
+Can't find symbol 'eglSwapBuffersWithDamageEXT'.
+Can't find symbol 'eglSetDamageRegionKHR'.
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+1612048455803	Marionette	INFO	Listening on port 56263
+1612048456176	Marionette	WARN	TLS certificate errors will be ignored for this session
+1612048461550	Marionette	INFO	Stopped listening on port 56263
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+1612048477658	geckodriver	INFO	Listening on 127.0.0.1:56325
+1612048480706	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "-foreground" "-no-remote" "-profile" "C:\\Users\\Alberto\\AppData\\Local\\Temp\\rust_mozprofileLMuGFT"
+Can't find symbol 'eglSwapBuffersWithDamageEXT'.
+Can't find symbol 'eglSetDamageRegionKHR'.
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+1612048484377	Marionette	INFO	Listening on port 56336
+1612048484843	Marionette	WARN	TLS certificate errors will be ignored for this session
+1612048488716	Marionette	INFO	Stopped listening on port 56336
+[Child 4124, Chrome_ChildThread] WARNING: pipe error: 232: file /builds/worker/checkouts/gecko/ipc/chromium/src/chrome/common/ipc_channel_win.cc:545
+[Child 4124, Chrome_ChildThread] WARNING: pipe error: 232: file /builds/worker/checkouts/gecko/ipc/chromium/src/chrome/common/ipc_channel_win.cc:545
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+

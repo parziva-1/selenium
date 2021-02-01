@@ -1,3 +1,4 @@
+"""
 from selenium import webdriver
 from selenium.webdriver.common.by import By
 from selenium.webdriver.common.keys import Keys
@@ -12,7 +13,30 @@ with webdriver.Firefox() as driver:
     first_result = wait.until(presence_of_element_located((By.CSS_SELECTOR, "h3>div")))
     print(first_result.get_attribute("textContent"))
 
-    numero = 0
-    while numero == 20:
-        numero=numero -1
+
+
+<div class="snotify snotify-rightBottom">
+    <div class="snotifyToast animated snotify-error fadeIn" style="">
+        <div class="snotifyToast__body">d
         
+            
+        </div>
+    </div>
+</div>
+
+import re
+
+notify = "Venta exitosa #166487057, por valor de 5000, nuevo saldo: 20000"
+
+if re.search('Venta', notify):
+        print(notify)
+"""
+
+re = 4
+
+for i in range(4):
+    while True:
+        try:
+            break
+        except:
+            continue
