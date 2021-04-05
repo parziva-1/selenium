@@ -66,6 +66,7 @@ driver.find_element_by_css_selector(bottonJoin).click()
 notify_result = wait.until(presence_of_element_located((By.CLASS_NAME, "snotifyToast__body")))
 print(notify_result.get_attribute("textContent"))
 
+
 """
 driver.find_element(By.NAME, "q").send_keys("cheese" + Keys.RETURN)
 first_result = wait.until(presence_of_element_located((By.CSS_SELECTOR, "h3>div")))

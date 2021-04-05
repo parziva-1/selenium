@@ -7,14 +7,50 @@ from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as ec
 from selenium.webdriver.chrome.options import Options
 from selenium.webdriver.support.expected_conditions import presence_of_element_located
+import psycopg2 
+from psycopg2 import Error
 
+def db():
+    try: 
+        global conection
+        connection = psycopg2.connect(
+            user="postgres",
+            password="56789432010aA",
+            host="127.0.0.1",
+            port="5432",
+            database="postgres"
+        )
+
+        cursor = connection.cursor()
+
+        print("PostgreSQL server information")
+        print(connection.get_dsn_parameters(), "\n")
+        cursor.execute("SELECT version();")
+        # Fetch result
+        record = cursor.fetchone()
+        print("You are connected to - ", record, "\n")
+    except (Exception, Error) as error:
+        print("Error while connecting to PostgreSQL", error)
+
+    finally:
+        if (connection):
+            cursor.close()
+            conecction.close()
+            print("PostgreSQL connection is closed")
 
 #guardar y acceder a la sesion
-"""
-chrome_options = Options()
+
+
+""" chrome_options = Options()
 chrome_options.add_argument("user-data-dir=selenium") 
-driver = webdriver.Chrome(chrome_options=chrome_options)
-"""
+driver = webdriver.Chrome(chrome_options=chrome_options) """
+
+options = webdriver.ChromeOptions()
+#para funcionar sin abrir el navegador
+#options.add_argument('--headless')
+driver = webdriver.Chrome(executable_path=r'C:\Users\Alberto\Documents\chromedriver.exe', options=options)
+
+
 #datos
 url = 'https://plataforma.refacil.co'
 urlNequiWallet = 'https://plataforma.refacil.co/#/wallets'
@@ -28,7 +64,7 @@ psw = str(df['Psw'][0])
 print(nequiValue)
 
 #Confifuraciones
-driver = webdriver.Chrome()
+#driver = webdriver.Chrome()
 wait = WebDriverWait(driver, 30) #tiempo de espera
 
 
@@ -152,11 +188,7 @@ def Nequi():
             except:
                 driver.find_element_by_css_selector('#modal3FA___BV_modal_body_ > form > div.box-btn.text-center.mt-4 > button.btn-primary.btn-recharge.btn-send').click()
             print("Ok")
-            """
-            alert = wait.until(ec.alert_is_present((By.CSS_SELECTOR, '#app > div:nth-child(2) > div.snotify.snotify-rightBottom')))
-            print(alert.get_attribute("textContent"))
-            time.sleep(5)
-            """
+           
             
             #iniciar otra vez
             driver.get('https://plataforma.refacil.co/#/sms')
@@ -220,7 +252,6 @@ Internet()
 print(internet)
 print(df.index)
 if internet == True:
-
         driver.maximize_window()
 
         driver.get(url)
@@ -248,6 +279,8 @@ if internet == True:
             
             while True:
                 try:
+                    time.sleep(5)
+                    driver.get('https://plataforma.refacil.co/#/snr')
                     time.sleep(5)
                     print(1)
                     driver.get(urlNequiWallet)
@@ -294,99 +327,12 @@ if internet == True:
                     print(notify_result.get_attribute("textContent"))
                     
                     
-                    #iniciar otra vez
+                    
                     
                     break
                 except:
                     continue
-
-            driver.get('https://plataforma.refacil.co/#/sms')
-
-
-
-            """
-            print('iteracion: ',i+1,", al Numero: ",cel)
-            time.sleep(5)
-            print(1)
-            driver.get(urlNequiWallet)
-            wait.until(ec.visibility_of_element_located((By.XPATH, nequiSelB)))
-            try:
-                driver.find_element_by_xpath(nequiSelB).click()
-            except:
-                #driver.find_element_by_css_selector('#app > div.recharge > div:nth-child(2) > div > div > div.col-lg-7.mb-4 > div.box-recharge > div > div > div:nth-child(1) > div').click()
-                Nequi()
-            print("Ok")
-            time.sleep(5)
-            print(2)
-            wait.until(ec.visibility_of_element_located((By.XPATH, nequiSelSend)))
-            try:
-                driver.find_element_by_xpath(nequiSelSend).click()
-            except:
-                #driver.find_element_by_css_selector('#app > div.recharge > div:nth-child(2) > div > div > div.col-lg-5.mb-4 > div > div > div:nth-child(1) > button').click()
-                Nequi()
-            print("Ok")
-            time.sleep(5)
-            print(3)
-            wait.until(ec.visibility_of_element_located((By.XPATH, nequiSelInputCel)))
-            try:
-                driver.find_element_by_xpath(nequiSelInputCel).send_keys(cel)
-            except:
-                #driver.find_element_by_css_selector('#app > div.recharge > div:nth-child(2) > div > div > div.col-lg-5.mb-4 > div > div > form > div > div.form-group > input').send_keys(cel)
-                Nequi()    
-            print("Ok")
-            time.sleep(5)
-            print(4)
-            wait.until(ec.visibility_of_element_located((By.XPATH, nequiSelInputValue)))
-            try:
-                driver.find_element_by_xpath(nequiSelInputValue).send_keys(nequiValue)
-            except:
-                #driver.find_element_by_css_selector('#app > div.recharge > div:nth-child(2) > div > div > div.col-lg-5.mb-4 > div > div > form > div > input').send_keys(nequiValue)
-                Nequi()
-            print("Ok")
-            time.sleep(5)
-            print(5)
-            wait.until(ec.visibility_of_element_located((By.XPATH, nequiSelBttSell)))
-            
-            try:
-                driver.find_element_by_xpath(nequiSelBttSell).click()
-            except:
-                #driver.find_element_by_css_selector('#app > div.recharge > div:nth-child(2) > div > div > div.col-lg-5.mb-4 > div > div > form > div > div.box-btn > button.btn-primary.btn-recharge.btn-send').click()
-                Nequi()
-            print("Ok")
-            time.sleep(5)
-            print(6)
-            wait.until(ec.visibility_of_element_located((By.XPATH, nequiSelBttSub)))
-            try:
-                driver.find_element_by_xpath(nequiSelBttSub).click()
-            except:
-                #driver.find_element_by_css_selector('#modalConfirmSale___BV_modal_body_ > div > div.text-center > button:nth-child(2)').click()
-                Nequi()
-            print("Ok")
-            time.sleep(5)
-            print(7)
-            wait.until(ec.visibility_of_element_located((By.XPATH, nequiSelInputPass)))
-            
-            try:
-                driver.find_element_by_xpath(nequiSelInputPass).send_keys(refacilSecondPass)
-            except:
-                #driver.find_element_by_css_selector('#modal3FA___BV_modal_body_ > form > div.form-group > div > input').send_keys(refacilSecondPass)
-                Nequi()
-            print("Ok")
-            time.sleep(5)
-            print(8)
-            wait.until(ec.visibility_of_element_located((By.XPATH, nequiSelBttSub2)))
-            
-            try:
-                driver.find_element_by_xpath(nequiSelBttSub2).click()
-            except:
-                #driver.find_element_by_css_selector('#modal3FA___BV_modal_body_ > form > div.box-btn.text-center.mt-4 > button.btn-primary.btn-recharge.btn-send').click()
-                Nequi()
-            print("Ok")
-            
-            notify_result = wait.until(presence_of_element_located((By.CLASS_NAME, "snotifyToast__body")))
-            print(notify_result.get_attribute("textContent"))
-            
-            
+                
             #iniciar otra vez
             driver.get('https://plataforma.refacil.co/#/sms')
-"""
+        

@@ -1,7 +1,2 @@
-[13640:4672:0123/173801.612:ERROR:device_event_log_impl.cc(211)] [17:38:01.613] Bluetooth: bluetooth_adapter_winrt.cc:1072 Getting Default Adapter failed.
-[13640:4672:0123/173903.080:INFO:CONSOLE(1)] "%cDetente! color: red; font-size: 45px; font-weight: bold;", source: https://plataforma.refacil.co/js/app.dce36d5f.js (1)
-[13640:4672:0123/173903.080:INFO:CONSOLE(1)] "%cSi alguien te dijo que pegaras algo acá, esta tratando de robar tu saldo! color: #333; font-size: 25px; font-weight: bold;", source: https://plataforma.refacil.co/js/app.dce36d5f.js (1)
-[13640:4672:0123/173903.409:INFO:CONSOLE(1)] "%cDetente! color: red; font-size: 45px; font-weight: bold;", source: https://plataforma.refacil.co/js/app.dce36d5f.js (1)
-[13640:4672:0123/173903.410:INFO:CONSOLE(1)] "%cSi alguien te dijo que pegaras algo acá, esta tratando de robar tu saldo! color: #333; font-size: 25px; font-weight: bold;", source: https://plataforma.refacil.co/js/app.dce36d5f.js (1)
-[13640:4672:0123/173912.672:INFO:CONSOLE(0)] "[DOM] Input elements should have autocomplete attributes (suggested: "new-password"): (More info: https://goo.gl/9p2vKq) %o", source: https://plataforma.refacil.co/#/ (0)
-[13640:4672:0123/173932.833:WARNING:pref_notifier_impl.cc(40)] Pref observer for media_router.cast_allow_all_ips found at shutdown.
+[10612:5184:0205/131653.867:ERROR:device_event_log_impl.cc(211)] [13:16:53.868] Bluetooth: bluetooth_adapter_winrt.cc:1072 Getting Default Adapter failed.
+[10612:5184:0205/131757.070:WARNING:pref_notifier_impl.cc(40)] Pref observer for media_router.cast_allow_all_ips found at shutdown.
